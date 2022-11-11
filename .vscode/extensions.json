@@ -4,6 +4,14 @@
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "pranaygp.vscode-css-peek",
+    "vscjava.vscode-java-pack",
+    "donjayamanne.githistory",
+    "Pivotal.vscode-boot-dev-pack",
+    "AntiAntiSepticeye.vscode-color-picker",
+    "DotJoshJohnson.xml",
+    "vscode-icons-team.vscode-icons"
   ]
 }

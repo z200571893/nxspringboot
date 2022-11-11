@@ -1,10 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'nxspringboot-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'nx-root',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  template: `
+    <div class="flex h-screen">
+      <router-outlet></router-outlet>
+    </div>
+  `,
 })
-export class AppComponent {
-  title = 'frontend';
-}
+export class AppComponent {}
