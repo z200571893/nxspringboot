@@ -16,7 +16,7 @@ export class DashboardComponent {
 
   constructor() {
     this.http
-      .get('http://localhost:8080/helloworld', { responseType: 'text' })
+      .get('http://localhost:8080/hello', { responseType: 'text' })
       .subscribe((res) => {
         console.log('res :>> ', res);
         this.name = res;

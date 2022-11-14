@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
-public class HelloWorldController {
+public class Ch01Controller {
 
-  @GetMapping("/helloworld")
-  String getHelloWorld() {
-    return "helloworld 2";
+  @GetMapping("/ch01")
+  String hello() {
+    return "Hello World";
   }
-
 }
