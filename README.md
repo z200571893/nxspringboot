@@ -1,36 +1,35 @@
-# 20221117
+# Project Title
 
-npx create-nx-workspace@latest --style=scss --name=nx --appName=frontend --preset=angular
+SpringBoot learning.
 
-? Choose your style
-Package-based: Craft your own setup. Nx makes it fast, but lets you run things your way.
+## Getting Started
 
-# Integrated: Get a pre-configured setup. Nx configures your favorite frameworks and lets you focus on shipping features.
+學習 SpringBoot 微服務架構.
 
-# angular [a workspace with a single Angular application]
+### Prerequisites
 
-✔ Choose your style · integrated
-✔ What to create in the new workspace · angular
-✔ Repository name › nx
-✔ Application name › backend
-✔ Default stylesheet format · scss
+開發環境
 
-npm install -g nx
+- JDK v17
+- Node.js v16
+- Git
+- Visual Studio Code or Eclipse
 
-nx g @nrwl/angular:application frontend
+### 環境建置
 
-npm i @nxrocks/nx-spring-boot -D --legacy-peer-deps
-nx g @nxrocks/nx-spring-boot:new backend
+- 建置 nx 專案
+  - npx create-nx-workspace@latest --style=scss --name=nx --appName=frontend --preset=angular
+  - npm install -g nx
+- 建置 backend springboot 專案
+  - npm i @nxrocks/nx-spring-boot -D --legacy-peer-deps
+  - nx g @nxrocks/nx-spring-boot:new backend
+- 加入 tailwindcss
+  - npm i tailwindcss -D --legacy-peer-deps
+- 啟動
+  - 多專案：nx run-many --target=serve --projects=frontend,backend
+  - 前端：nx serve frontend （cd apps/frontend/ && ng serve)
+  - 後段：nx serve backend（cd apps/backend/ && ./mvnw spring-boot:run)
 
-✔ What kind of project are you generating? · application
-✔ Which build system would you like to use? · maven-project
-✔ Which packaging would you like to use? · jar
-✔ Which version of Java would you like to use? · 17
-✔ Which language would you like to use? · java
-✔ What groupId would you like to use? › com.example
-
-npm i tailwindcss -D --legacy-peer-deps
+### 課程大綱
 
 https://snippet-generator.app/
-
-nx run-many --target=serve --projects=frontend,backend
