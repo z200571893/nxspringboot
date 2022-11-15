@@ -13,7 +13,7 @@ public class Ch02Controller {
   private String envName;
 
   @GetMapping("/ch02")
-  String hello() {
+  String ch02() {
     return envName;
   }
 }

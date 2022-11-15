@@ -80,4 +80,46 @@ public class Ch02Controller {
 }
 ```
 
+### ch3
+
+根據上下行電文 json，建立 java 相關物件
+
+- 上行電文
+
+```json
+{
+  "header": {
+    "funId": "1",
+    "key": "2",
+    "role": "3",
+    "clientIp": "4"
+  },
+  "body": {
+    "customerId": "A123456789"
+  }
+}
+```
+
+- 下行電文
+
+```json
+{
+  "header": {
+    "funId": "1",
+    "key": "2",
+    "role": "3",
+    "clientIp": "4",
+    "code": "5",
+    "msg": "6"
+  },
+  "body": {
+    "customerId": "A123456789",
+    "name": "Alan",
+    "age": 20,
+    "tel": "0912345678",
+    "addr": "地址"
+  }
+}
+```
+
 https://snippet-generator.app/
