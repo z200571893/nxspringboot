@@ -122,4 +122,13 @@ public class Ch02Controller {
 }
 ```
 
-https://snippet-generator.app/
+### ch4
+
+透過 spring data jpa 取得資料
+
+- 建立 schema.sql、data.sql
+- 建立 entity、repository、service 相關物件
+  - 建立 Customer.java
+  - 建立 CustomerRepository.java
+  - 建立 CustomerService.java
+- 根據上行 customerId 欄位查詢資料
