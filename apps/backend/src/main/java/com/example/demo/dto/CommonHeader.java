@@ -1,4 +1,4 @@
-package com.example.dto;
+package com.example.demo.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommonHeaderResponse {
+public class CommonHeader {
 
   @JsonProperty("funId")
   public String funId;
@@ -24,10 +24,4 @@ public class CommonHeaderResponse {
 
   @JsonProperty("clientIp")
   public String clientIp;
-
-  @JsonProperty("code")
-  public String code;
-
-  @JsonProperty("msg")
-  public String msg;
 }
