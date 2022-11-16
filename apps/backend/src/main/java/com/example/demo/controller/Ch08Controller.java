@@ -36,7 +36,11 @@ public class Ch08Controller {
 
     if (errors.hasErrors()) {
       header.setCode("9999");
-      header.setMsg(errors.getFieldError().getDefaultMessage());
+
+      var err = errors.getFieldError();
+      if (err != null) {
+        header.setMsg(err.getDefaultMessage());
+      }
     } else {
       List<CustomerResponseBody> dataList = new LinkedList<>();
 
