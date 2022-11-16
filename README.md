@@ -32,11 +32,11 @@ SpringBoot learning.
 
 ## 課程大綱
 
-### ch1
+### ch01
 
 建立一支 API
 
-- 增加 HelloWorldController，呼叫顯示'Hello World'
+- 增加 Ch01Controller，呼叫顯示'Hello World'
 
 - Run BackendApplication and open http://localhost:8080/ch01
 
@@ -52,11 +52,11 @@ public class Ch01Controller {
 }
 ```
 
-### ch2
+### ch02
 
 學習建立各環境設定檔並印出
 
-- 增加 HelloWorldController，呼叫取得各環境的變數
+- 增加 Ch02Controller，呼叫取得各環境的變數
 
 - resources 目錄增加 application-ut.properties、application-uat.properties、application-prod.properties
 
@@ -80,7 +80,7 @@ public class Ch02Controller {
 }
 ```
 
-### ch3
+### ch03
 
 根據上下行電文 json，建立 java 相關物件
 
@@ -124,7 +124,7 @@ public class Ch02Controller {
 }
 ```
 
-### ch4
+### ch04
 
 透過 spring data jpa 取得資料
 
@@ -135,7 +135,7 @@ public class Ch02Controller {
   - 建立 CustomerService.java
 - 根據上行 customerId 欄位查詢資料
 
-### ch5
+### ch05
 
 練習 JpaRepository
 
@@ -157,7 +157,7 @@ public class Ch02Controller {
 }
 ```
 
-### ch6
+### ch06
 
 練習 JpaRepository interface dto
 
@@ -212,19 +212,19 @@ public class Ch02Controller {
 }
 ```
 
-### ch7
+### ch07
 
 練習 JDK8 stream
 
 - 使用 filter 過濾資料
 
-### ch8
+### ch08
 
 加入檢核機制
 
 - 檢核 gender 不能為空白
 
-### ch9
+### ch09
 
 學習用 thymeleaf 框架(Hello World)
 
@@ -237,14 +237,14 @@ public class Ch02Controller {
 </dependency>
 ```
 
-- 增加 HelloWorldController，把訊訊息文字返回至 hello.html
+- 增加 Ch09Controller，把訊訊息文字返回至 hello.html
 
 ```java
 @Controller
-public class HelloWorldController {
+public class Ch09Controller {
 
-    @GetMapping("/hello")
-    public String hello(Model model) {
+    @GetMapping("/ch09")
+    public String ch09(Model model) {
         model.addAttribute("text", "Hello World!!");
         return "hello";
     }
