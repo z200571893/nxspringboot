@@ -1,5 +1,7 @@
 package com.example.demo.dto;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
@@ -17,5 +19,5 @@ public class CustomerResponse {
   public CommonHeaderResponse header;
 
   @JsonProperty("body")
-  public CustomerResponseBody body;
+  public List<CustomerResponseBody> body;
 }

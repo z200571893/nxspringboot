@@ -46,7 +46,7 @@ SpringBoot learning.
 public class Ch01Controller {
 
   @GetMapping("/ch01")
-  String hello() {
+  String ch01() {
     return "Hello World";
   }
 }
@@ -74,7 +74,7 @@ public class Ch02Controller {
 	private String envName;
 
 	@GetMapping("/ch02")
-	public String hello() {
+	public String ch02() {
 		return envName;
 	}
 }
@@ -112,13 +112,15 @@ public class Ch02Controller {
     "code": "5",
     "msg": "6"
   },
-  "body": {
-    "customerId": "A123456789",
-    "name": "Alan",
-    "age": 20,
-    "tel": "0912345678",
-    "addr": "地址"
-  }
+  "body": [
+    {
+      "customerId": "A123456789",
+      "name": "Alan",
+      "age": 20,
+      "tel": "0912345678",
+      "addr": "地址"
+    }
+  ]
 }
 ```
 
@@ -132,3 +134,25 @@ public class Ch02Controller {
   - 建立 CustomerRepository.java
   - 建立 CustomerService.java
 - 根據上行 customerId 欄位查詢資料
+
+### ch5
+
+練習 JpaRepository
+
+- 查詢性別為男性的客戶
+
+- 上行電文
+
+```json
+{
+  "header": {
+    "funId": "1",
+    "key": "2",
+    "role": "3",
+    "clientIp": "4"
+  },
+  "body": {
+    "gender": "M"
+  }
+}
+```

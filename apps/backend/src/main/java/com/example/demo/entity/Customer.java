@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,18 +16,16 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "CUSTOMER")
+@Entity(name = "Customer")
+@Table(name = "CUSTOMER")
 public class Customer {
 
   @Id
   @Column(name = "CUSTOMER_ID")
   public String customerId;
-
   public String name;
-
   public String tel;
-
   public String addr;
-
+  public String gender;
   public BigDecimal age;
 }

@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
-import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,34 +19,41 @@ import com.example.demo.service.CustomerService;
 
 @CrossOrigin
 @RestController
-public class Ch04Controller {
+public class Ch05Controller {
 
   @Autowired
   public CustomerService customerService;
 
-  @PostMapping("/ch04")
-  public CustomerResponse ch04(@RequestBody CustomerRequest request) {
+  @PostMapping("/ch05")
+  public CustomerResponse ch05(@RequestBody CustomerRequest request) {
     CustomerResponse response = new CustomerResponse();
-    CustomerResponseBody responseBody = new CustomerResponseBody();
+    List<CustomerResponseBody> dataList = new LinkedList<>();
 
     CommonHeaderResponse header = new CommonHeaderResponse();
     BeanUtils.copyProperties(request.getHeader(), header);
 
-    String customerId = request.getBody().getCustomerId();
-    Customer customer = this.customerService.findByCustomerId(customerId);
+    String gender = request.getBody().getGender();
+    List<Customer> customers = this.customerService.findByGender(gender);
+    // var customers = this.customerService.findAllCustomersByGenderNative(gender);
+    // var customers = this.customerService.findAllMaleCustomersNative();
+    // var customers = this.customerService.findAllCustomersByGenderNative(gender);
 
-    if (customer != null) {
+    if (customers != null && !customers.isEmpty()) {
       header.setCode("0000");
       header.setMsg("成功");
 
-      BeanUtils.copyProperties(customer, responseBody);
+      for (Customer customer : customers) {
+        CustomerResponseBody responseBody = new CustomerResponseBody();
+        BeanUtils.copyProperties(customer, responseBody);
+        dataList.add(responseBody);
+      }
     } else {
       header.setCode("9999");
       header.setMsg("查無資料");
     }
 
     response.setHeader(header);
-    response.setBody(Arrays.asList(responseBody));
+    response.setBody(dataList);
 
     return response;
   }

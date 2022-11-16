@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,7 +19,7 @@ import com.example.demo.dto.CustomerResponseBody;
 public class Ch03Controller {
 
   @PostMapping("/ch03")
-  public CustomerResponse hello(@RequestBody CustomerRequest request) {
+  public CustomerResponse ch03(@RequestBody CustomerRequest request) {
     CustomerResponse response = new CustomerResponse();
     CustomerResponseBody responseBody = new CustomerResponseBody();
 
@@ -34,7 +35,7 @@ public class Ch03Controller {
     responseBody.setAge(BigDecimal.valueOf(20));
 
     response.setHeader(header);
-    response.setBody(responseBody);
+    response.setBody(Arrays.asList(responseBody));
 
     return response;
   }
