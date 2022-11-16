@@ -223,3 +223,33 @@ public class Ch02Controller {
 加入檢核機制
 
 - 檢核 gender 不能為空白
+
+### ch9
+
+學習用 thymeleaf 框架(Hello World)
+
+- pom.xml 加入 spring-boot-starter-thymeleaf
+
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
+```
+
+- 增加 HelloWorldController，把訊訊息文字返回至 hello.html
+
+```java
+@Controller
+public class HelloWorldController {
+
+    @GetMapping("/hello")
+    public String hello(Model model) {
+        model.addAttribute("text", "Hello World!!");
+        return "hello";
+    }
+}
+```
+
+- hello.html 需增加 `xmlns:th="http://www.thymeleaf.org"` 屬性
+- 使用 th:text 印出後端的傳遞的資料
