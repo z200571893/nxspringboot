@@ -43,4 +43,9 @@ public class CustomerService {
   public List<CustomerResponseDtoBody> findCustomerNameByGenderNative(String gender) {
     return this.customerRepository.findCustomerNameByGenderNative(gender);
   }
+
+  public List<Customer> findCustomerByGenderStream(String gender) {
+    var customers = this.customerRepository.findAll();
+    return customers.stream().filter(o -> gender.equals(o.getGender())).toList();
+  }
 }

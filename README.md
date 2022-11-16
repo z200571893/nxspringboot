@@ -211,3 +211,15 @@ public class Ch02Controller {
   ]
 }
 ```
+
+### ch7
+
+練習 JDK8 stream
+
+- 使用 filter 過濾資料
+
+### ch8
+
+加入檢核機制
+
+- 檢核 gender 不能為空白
