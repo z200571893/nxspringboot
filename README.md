@@ -156,3 +156,58 @@ public class Ch02Controller {
   }
 }
 ```
+
+### ch6
+
+練習 JpaRepository interface dto
+
+- 查詢性別為男性的客戶姓名
+
+- 上行電文
+
+```json
+{
+  "header": {
+    "funId": "1",
+    "key": "2",
+    "role": "3",
+    "clientIp": "4"
+  },
+  "body": {
+    "gender": "M"
+  }
+}
+```
+
+- 下行電文
+
+```json
+{
+  "header": {
+    "funId": "1",
+    "key": "2",
+    "role": "3",
+    "clientIp": "4",
+    "code": "0000",
+    "msg": "成功"
+  },
+  "body": [
+    {
+      "name": "Rodney",
+      "customerId": "A123456789"
+    },
+    {
+      "name": "Steve",
+      "customerId": "C123456789"
+    },
+    {
+      "name": "Vanessa",
+      "customerId": "E123456789"
+    },
+    {
+      "name": "Madhuri",
+      "customerId": "G123456789"
+    }
+  ]
+}
+```

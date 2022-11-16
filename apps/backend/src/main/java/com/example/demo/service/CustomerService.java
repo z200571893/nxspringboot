@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.CustomerResponseDtoBody;
 import com.example.demo.entity.Customer;
 import com.example.demo.repository.CustomerRepository;
 
@@ -37,5 +38,9 @@ public class CustomerService {
 
   public List<Customer> findAllCustomersByGenderNative(String gender) {
     return this.customerRepository.findAllCustomersByGenderNative(gender);
+  }
+
+  public List<CustomerResponseDtoBody> findCustomerNameByGenderNative(String gender) {
+    return this.customerRepository.findCustomerNameByGenderNative(gender);
   }
 }
