@@ -22,5 +22,4 @@ export class DashboardComponent {
         this.name = res;
       });
   }
-  // ngOnInit(): void {}
 }
