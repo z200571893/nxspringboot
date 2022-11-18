@@ -260,5 +260,7 @@ public class Ch09Controller {
 - 建立本機 postgresql、mysql database
 - 建立 config 目錄，設定 Multiple Data Sources
 - save or update 需同時寫入 database，且需要事務處理機制
+- 使用 thymeleaf 印出所有客戶資料在 table 上
+- 組件化 thymeleaf customer table，讓其他畫面可以 include
 - 小組討論畫面設計，依據畫面設計 table 等相關 api 功能
 - 挑戰：改使用 r2dbc 的 webflux 方式改寫 api
