@@ -253,3 +253,12 @@ public class Ch09Controller {
 
 - hello.html 需增加 `xmlns:th="http://www.thymeleaf.org"` 屬性
 - 使用 th:text 印出後端的傳遞的資料
+
+### TODO
+
+- 建立個人的 github 帳號，fork 本專案 and pull request（PR 前需先 git rebase）
+- 建立本機 postgresql、mysql database
+- 建立 config 目錄，設定 Multiple Data Sources
+- save or update 需同時寫入 database，且需要事務處理機制
+- 小組討論畫面設計，依據畫面設計 table 等相關 api 功能
+- 挑戰：改使用 r2dbc 的 webflux 方式改寫 api
