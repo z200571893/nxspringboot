@@ -17,6 +17,8 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
 
   List<Customer> findByGender(String gender);
 
+  List<Customer> findByTel(String tel);
+
   @Query("SELECT c FROM Customer c WHERE c.gender = 'M'")
   List<Customer> findAllMaleCustomers();
 
@@ -29,7 +31,16 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
   @Query(value = "SELECT * FROM CUSTOMER c WHERE c.GENDER = :gender", nativeQuery = true)
   List<Customer> findAllCustomersByGenderNative(@Param("gender") String gender);
 
+  // tel
+  @Query(value = "SELECT c.CUSTOMER_ID as customerId, c.NAME as name FROM CUSTOMER c WHERE c.TEL = :tel", nativeQuery = true)
+  List<CustomerResponseDtoBody> findAllCustomerNameByTelNative(String tel);
+
   @Query(value = "SELECT c.CUSTOMER_ID as customerId, c.NAME as name FROM CUSTOMER c WHERE c.GENDER = :gender", nativeQuery = true)
   List<CustomerResponseDtoBody> findCustomerNameByGenderNative(@Param("gender") String gender);
+
+  // 自定義
+  @Query(value = "SELECT c.CUSTOMER_ID as customerId, c.NAME as name FROM CUSTOMER c WHERE c.GENDER = :gender AND c.TEL = :tel", nativeQuery = true)
+  List<CustomerResponseDtoBody> findCustomerNameByGenderNative(@Param("gender") String gender,
+      @Param("tel") String tel);
 
 }

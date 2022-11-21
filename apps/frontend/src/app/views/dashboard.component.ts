@@ -6,7 +6,16 @@ import { Component, inject } from '@angular/core';
   selector: 'nx-dashboard',
   standalone: true,
   imports: [CommonModule],
-  template: ` <p class="mt-2 text-blue-600">{{ name }}</p> `,
+  template: `
+    <div class="flex flex-col w-screen h-screen">
+      <p class="mt-2 text-blue-600">{{ name }}</p>
+      <div class="bg-blue-200">main</div>
+      <div class="flex h-12 bg-blue-50 items-center justify-between">
+        <div>logo</div>
+        <div>logo2</div>
+      </div>
+    </div>
+  `,
   styles: [],
 })
 export class DashboardComponent {

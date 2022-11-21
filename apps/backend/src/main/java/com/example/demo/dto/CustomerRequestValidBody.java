@@ -14,7 +14,7 @@ import lombok.ToString;
 public class CustomerRequestValidBody {
 
   public String customerId;
-
+  // NotBlank檢核
   @NotBlank(message = "性別不能為空白")
   public String gender;
 }

@@ -11,5 +11,6 @@ public class Ch09Controller {
   public String ch09(Model model) {
     model.addAttribute("text", "Hello World!!");
     return "hello";
+
   }
 }

@@ -13,4 +13,5 @@ public class CustomerRequestBody {
 
   public String customerId;
   public String gender;
+  public String tel;
 }
